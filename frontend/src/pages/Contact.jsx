@@ -24,7 +24,7 @@ export default function Contact() {
     setStatus(null);
     
     try {
-      await axios.post('http://localhost:5000/api/contact', formData);
+      await axios.post('https://idea-connect-backend.onrender.com/api/contact', formData);
       setStatus({ type: 'success', text: 'Message sent successfully! We will get back to you soon.' });
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (err) {
